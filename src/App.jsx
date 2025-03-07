@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Book from "./components/book";
+import Book from "./components/Book"
 import sevenImg from "./assets/images/biology-7.jpg";
 import eightImg from "./assets/images/biology-8.jpg";
 import nineImg from "./assets/images/biology-9.png";
