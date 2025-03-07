@@ -39,7 +39,7 @@ function App() {
   const [bookShelf, setBookShelf] = useState(false);
 
   return (
-    <div className="w-full h-screen border flex relative overflow-hidden">
+    <div className="w-full h-screen flex relative overflow-hidden">
       <iframe
         title="ბიოლოგია-7-მოსწავლის-წიგნი"
         src={books[currentBook].url}
@@ -47,22 +47,23 @@ function App() {
         data-aspect-ratio="0.7088906372934697"
         width="100%"
         height="800"
-        className="h-full border-2"
+        className="h-full"
       ></iframe>
       <div
-        className={`absolute right-0 flex items-center ${
-          !bookShelf ? "translate-x-[80%]" : "translate-x-0"
+        className={`absolute right-0 flex items-center transition-all duration-200 ${
+          !bookShelf ? "translate-x-[87%]" : "translate-x-0"
         }`}
       >
         <button
+          title="წიგნების სია"
           onClick={() => setBookShelf(!bookShelf)}
-          className="bg-blue-500 text-white h-10 w-10 rounded-l-full"
+          className="bg-indigo-700/90 text-white h-10 w-10 rounded-l-full"
         >
           {bookShelf ? "->" : "<-"}
         </button>
         <div
           id="book-list"
-          className={`w-40 h-screen overflow-auto flex flex-col items-center bg-slate-200`}
+          className={`w-64 h-screen overflow-auto flex flex-col items-center bg-indigo-700/90`}
         >
           {bookShelf &&
             books.map((book, idx) => (

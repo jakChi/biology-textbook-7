@@ -11,9 +11,9 @@ Book.propTypes = {
 function Book({ id, title, img, setCurrentBook }) {
   return (
     <>
-      <h3>{title}</h3>
+      <h3 className="text-center text-sm font-semibold text-white mx-1">{title}</h3>
       <div
-        className="my-10 w-28 border-2 border-indigo-500 rounded-sm cursor-pointer"
+        className="my-10 w-28 border-2 border-white rounded-sm cursor-pointer"
         onClick={() => setCurrentBook(id)}
       >
         <img src={img} alt="book cover" className="w-full overflow-auto" />
